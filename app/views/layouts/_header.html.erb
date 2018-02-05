@@ -1,0 +1,33 @@
+<nav class="uk-navbar-container" uk-navbar>
+
+    <div class="uk-navbar-left">
+        <%= link_to 'Propel(x)', root_path, class: "uk-navbar-item uk-logo" %>
+        <ul class="uk-navbar-nav">
+            <li>
+                <a href="#">Explore</a>
+                <div class="uk-navbar-dropdown">
+                    <ul class="uk-nav uk-navbar-dropdown-nav">
+                        <li class="uk-active"><a href="#">Active</a></li>
+                        <li><a href="#">Item</a></li>
+                        <li><a href="#">Item</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <div class="uk-navbar-right">
+
+        <ul class="uk-navbar-nav">
+            <li class="uk-active"><a href="#">Invest in Startups</a></li>
+            <li><a href="#">List a Startup</a></li>
+            <li><a href="#">Share Expertise</a></li>
+            <% if current_user %>
+            <li><%= link_to 'Log out', destroy_user_session_path, :method=>'delete' %></li>
+             <% end %>
+        </ul>
+
+    </div>
+
+</nav>

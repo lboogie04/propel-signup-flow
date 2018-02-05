@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Propelcc</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/css/uikit.min.css' %>
+    <%= stylesheet_link_tag 'https://unpkg.com/react-rangeslider/umd/rangeslider.min.css' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.39/js/uikit.min.js' %>
+    <%= javascript_include_tag 'https://use.fontawesome.com/releases/v5.0.6/js/all.js' %>
+    <%= javascript_pack_tag 'application' %>
+  </head>
+  <%= render 'layouts/header' %>
+  <body>
+    <%= yield %>
+   <%= render 'layouts/footer' %>
+  </body>
+</html>

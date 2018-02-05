@@ -1,0 +1,45 @@
+<div class="uk-container sign-up">
+<h1>Sign Up</h1>
+ <h3>Ready to discover breakthrough startups?</h3>
+ <p>Creating an account allows you access to all of the investment opportunities on Propel(x). We recommend signing up with Linkedin to help personalize your Propel(x) profile.</p>
+ 
+ 
+ <div class="actions">
+  <div class="row">
+ <%= link_to image_tag("linkedin.png"), user_linkedin_omniauth_authorize_path %>
+  </div>
+  <div class="row or-span">
+ <span><strong>OR</strong></span>
+  </div>  
+ 
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.text_field :first_name, autofocus: true, class: 'uk-input', placeholder: 'First Name' %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :last_name, autofocus: true,  class: 'uk-input', placeholder: 'Last Name' %>
+  </div>
+ 
+  <div class="field">
+    <%= f.email_field :email, autofocus: true, class: 'uk-input', placeholder: 'Email' %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "off", class: 'uk-input', placeholder: 'Create Password' %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: 'uk-input', placeholder: 'Confirm Password' %>
+  </div>
+
+  <div class="button-actions">
+    <%= f.submit "Sign up", class: 'propel-button' %>
+  </div>
+<% end %>
+ <%= render "devise/shared/links" %>
+ </div>
+</div> 
+
